@@ -24,6 +24,11 @@ class Header extends React.Component {
                                     Donations
                                 </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to='/map'>
+                                    Map
+                                </Link>
+                            </li>
                         </ul>
                 </nav>
             </div>

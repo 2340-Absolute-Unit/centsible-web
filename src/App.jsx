@@ -9,6 +9,7 @@ import LocationDetails from './components/LocationDetails';
 import AddDonation from './components/AddDonation'; 
 import Donation from './components/Donation';
 import DonationDetails from './components/DonationDetails';
+import MapHolder from './components/MapHolder';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
           <Route path='/donations' component={Donation} />
           <Route path='/donation/:id' component={DonationDetails} />
           <Route path='/addDonation' component={AddDonation} />
+          <Route path='/map' component={MapHolder} />
         </Switch>
         </div>
       </div>
