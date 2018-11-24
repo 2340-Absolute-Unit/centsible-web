@@ -13,18 +13,11 @@
 // };
 
 export const getLocation = (key) => {
-    console.log(key);
-    console.log("NOT FUNCTIONED YET");
     return (dispatch, getState, {getFirebase, getFirestore}) => {
-        console.log(key);
         const firestoreDB = getFirestore();
         const dbRef = firestoreDB.collection("locations");
-        const query = {
-            where: ['key', '==', "1"]
-        };
-        dbRef.where("key", "==", "1").get()
+        dbRef.where("key", "==", key).get()
             .then((querySnapshot) => querySnapshot.forEach((doc) => {
-                console.log(doc);
                 dispatch({type: 'FOUND_SINGLE_LOCATION', location: doc.data()})
             }
             ))

@@ -24,6 +24,12 @@ class Donation extends React.Component {
                         <button className="btn btn-primary"> Add Donation </button>
                     </Link>
                 </div>
+                <div>
+                    <Link to='/donationSearch'>
+                        <button className="btn btn-primary"> Search Donations </button>
+                    </Link>
+                </div>
+                
             </div>
         )
     }
@@ -39,6 +45,6 @@ const mapStateToProps = (state) => {
 export default (compose(
     connect(mapStateToProps),
     firestoreConnect([
-        { collection: 'donations', collectiom: 'locations' }
+        { collection: 'donations'}
     ])
 )(Donation))

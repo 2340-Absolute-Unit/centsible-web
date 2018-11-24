@@ -11,6 +11,7 @@ import Donation from './components/Donation';
 import DonationDetails from './components/DonationDetails';
 import MapHolder from './components/MapHolder';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
+import DonationSearch from './components/DonationSearch';
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
           <Route path='/location/:id' component={LocationDetails} />
           <Route path='/locations' component={Location} />
           <Route path='/donations' component={Donation} />
+          <Route path='/donationSearch' component={DonationSearch} />
           <Route path='/donation/:id' component={DonationDetails} />
           <Route path='/addDonation' component={AddDonation} />
           <Route path='/map' component={MapHolder} />

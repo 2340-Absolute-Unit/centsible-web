@@ -2,14 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
-import { Link } from 'react-router-dom';
 import { getLocation } from '../actions/locationActions'; 
 
 
 class DonationDetails extends React.Component {
     render() {
         if (this.props.donation) {
-            console.log(this.props.donation.lastUpdated);
             return ( 
                 <div>
                     <h2>{this.props.donation.name}</h2> 
@@ -44,8 +42,6 @@ const mapStateToProps = (state, ownProps) => {
     const id = ownProps.match.params.id;
     const donations = state.firestore.data.donations;
     const donation = donations ? donations[id] : null;
-    const locKey = donation ? donation.location : null;
-    console.log(state);
     return {
         donation: donation,
         auth: state.firebase.auth, 

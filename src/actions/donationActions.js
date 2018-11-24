@@ -12,3 +12,9 @@ export const createDonation = (donation) => {
         })
     }
 }
+
+export const filterDonations = (filter) => {
+    return (dispatch, getState, { getFirebase, getFirestore}) => {
+        dispatch({type: 'EDIT_FILTERS', filter})
+    }
+}

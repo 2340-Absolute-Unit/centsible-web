@@ -73,10 +73,4 @@ class SignInScreen extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  console.log(state);
-  return {
-      
-  }
-}
-export default connect(mapStateToProps)(SignInScreen); 
+export default SignInScreen; 
